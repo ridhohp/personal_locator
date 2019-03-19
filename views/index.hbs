@@ -1,0 +1,80 @@
+<html>
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+      
+
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+      
+      
+    </head>
+
+    <body>
+      <div class="row">
+        <div class="col s12" style="text-align:center; margin-top:-20px">
+          <img src="/images/nusanet.gif" width="400px" height="100px" > 
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col s12" style="text-align:center; margin-bottom: 30px">
+          <span style="font-size:25px; color:blue; text-align:center; font-family:roboto">
+            <b>PERSONAL LOCATOR</b>
+          </span>
+        </div>
+      </div>
+
+      <br><center style="margin-left:-60px">
+      <font color="#111" style ="margin-left:50px; font-size:20px; font-family:roboto">
+      <script type='text/javascript'>
+        now = new Date();
+        if (now.getTimezoneOffset() == 0) (a=now.getTime() + ( 7 *60*60*1000))
+        else (a=now.getTime());
+        now.setTime(a);
+        var tahun= now.getFullYear ()
+        var hari= now.getDay ()
+        var bulan= now.getMonth ()
+        var tanggal= now.getDate ()
+        var hariarray=new Array("Minggu,","Senin,",
+        "Selasa,","Rabu,","Kamis,","Jum'at,","Sabtu,")
+        var bulanarray=new Array("Januari","Februari","Maret","April","Mei","Juni","Juli","Agustus","September","Oktober","Nopember","/ 12 /")
+        document.write(hariarray[hari]+" "+tanggal+" "+bulanarray[bulan]+" "+tahun)
+        script(type='text/javascript').
+        now = new Date();
+        if (now.getTimezoneOffset() == 0) (a=now.getTime() + ( 7 *60*60*1000))
+        else (a=now.getTime());
+        now.setTime(a);
+        document.write(" <br> " + ((now.getHours() < 10) ? "0" : "") + now.getHours() + ":" + ((now.getMinutes() < 10)? "0" : "") + now.getMinutes() + (" W.I.B "))
+      </script></center>
+      <table class="centered" style='width:80%; margin-top: 40px; margin-left: 140px; border-left:2px solid blue; border-right:2px solid blue; '>
+        <thead>
+          <tr>
+              <th>Nama</th>
+              <th><t>Status</th>
+              <th>Mac Adress Bluetooth</th>
+          </tr>
+        </thead>
+
+        <tbody>
+        {{#each data}}
+          <tr>
+            <td>{{nama}}</td>
+            <td><t>{{status}}</td>
+            <td>{{mac}}</td>
+          </tr>
+          {{/each}}
+        </tbody>
+      </table>
+            
+    </body>
+  </html>
